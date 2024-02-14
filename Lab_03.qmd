@@ -4,6 +4,17 @@ subtitle: "ENVX1002"
 description: The University of Sydney
 date: today
 date-format: "[Semester 1,] YYYY"
+output:
+  html:
+    fig_caption: false
+    self_contained: true
+    theme: lumen
+    toc: true
+    toc_depth: 4
+    number_sections: true
+    toc_float:
+      collapsed: false
+    md_extensions: +grid_tables
 ---
 
 # Learning outcomes
