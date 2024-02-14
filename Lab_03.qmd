@@ -142,7 +142,7 @@ Repeat exercise 4, but this time change the 'prob = c(0.5, 0.5)' to 'prob = c(0.
 
 ## Exercise 6
 
-Repeat exercise 4, but this time change the 'set.seed(1)' to 'set.seed(123)'. 
+Repeat exercise 4, but this time change the `set.seed(1)` to `set.seed(123)`. 
 
 **Question:** What happens to the frequency table 'Freq_table' why do you think it might change?
 
