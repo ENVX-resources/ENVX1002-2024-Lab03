@@ -196,6 +196,10 @@
 \makeatother
 \KOMAoption{captions}{tableheading}
 \makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
 \ifdefined\contentsname
@@ -231,8 +235,6 @@
 \newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
 \makeatother
 \makeatletter
-\makeatother
-\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
@@ -240,19 +242,17 @@
 \@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
 \makeatother
 \makeatletter
-\@ifundefined{shadecolor}{\definecolor{shadecolor}{HTML}{E64626}}{}
+\@ifundefined{shadecolor}{\definecolor{shadecolor}{HTML}{E64626}}
 \makeatother
 \makeatletter
-\@ifundefined{codebgcolor}{\definecolor{codebgcolor}{HTML}{F1F1F1}}{}
+\@ifundefined{codebgcolor}{\definecolor{codebgcolor}{HTML}{F1F1F1}}
 \makeatother
 \makeatletter
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, breakable, frame hidden, sharp corners, enhanced, colback={codebgcolor}, boxrule=0pt]}{\end{tcolorbox}}\fi
 \makeatother
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
-\usepackage{bookmark}
-
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
@@ -277,8 +277,9 @@
 
 \begin{document}
 \maketitle
-
 \pagestyle{usyd}
+
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[colback={codebgcolor}, enhanced, boxrule=0pt, breakable, sharp corners, borderline west={3pt}{0pt}{shadecolor}, frame hidden]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -287,7 +288,8 @@
 \tableofcontents
 }
 \setstretch{1.2}
-\section{Learning outcomes}\label{learning-outcomes}
+\hypertarget{learning-outcomes}{%
+\section{Learning outcomes}\label{learning-outcomes}}
 
 At the end of this computer practical, students should be able to
 calculate Binomial and Poisson probabilities using your calculator, R
@@ -300,7 +302,8 @@ can do using R, your calculator, or in your head.
 But before we begin, your demonstrator will lead a group discussion on
 academic integrity.
 
-\section{Academic integrity}\label{academic-integrity}
+\hypertarget{academic-integrity}{%
+\section{Academic integrity}\label{academic-integrity}}
 
 This exercise encourages students to discuss academic integrity, and in
 particular the grey areas often present. Your demonstrator will provide
@@ -313,9 +316,11 @@ https://www.sydney.edu.au/students/academic-integrity.html. Also ensure
 you have completed the Academic Honesty Education Module (AHEM) as soon
 as you can before your first assessment is due.
 
-\section{The Binomial Distribution}\label{the-binomial-distribution}
+\hypertarget{the-binomial-distribution}{%
+\section{The Binomial Distribution}\label{the-binomial-distribution}}
 
-\subsection{Notation}\label{notation}
+\hypertarget{notation}{%
+\subsection{Notation}\label{notation}}
 
 Factorials: \(n! = n(n - 1)(n - 2)...(3)(2)(1)\) for \(n \ge 1\) and
 \(0! = 1\).
@@ -336,12 +341,14 @@ for \(x=1,2,3,...,n\)
 
 Cumulative distribution function (CDF): \(F(x) = P(X \le x)\).
 
-\subsection{Exercise 1}\label{exercise-1}
+\hypertarget{exercise-1}{%
+\subsection{Exercise 1}\label{exercise-1}}
 
 With your neighbour, discuss how coin tossing is related to the Binomial
 distribution?
 
-\subsection{Exercise 2}\label{exercise-2}
+\hypertarget{exercise-2}{%
+\subsection{Exercise 2}\label{exercise-2}}
 
 Practicing using the Binomial distribution formula
 
@@ -377,7 +384,8 @@ calculator - watch this vid https://www.youtube.com/watch?v=tZf8alsyVCQ
 which gives a nice demonstration with some elevator music in the
 background to relax you.
 
-\subsection{Exercise 3}\label{exercise-3}
+\hypertarget{exercise-3}{%
+\subsection{Exercise 3}\label{exercise-3}}
 
 \textbf{Collaboration} - Simulate the Binomial Distribution by Coin
 Tossing
@@ -450,7 +458,7 @@ Probability \(P(X=x)\) & & & & & & 1 \\
   https://support.microsoft.com/en-us/office/present-your-data-in-a-column-chart-d89050ba-e6b6-47de-b090-e9ab353c4c00
 \end{itemize}
 
-\begin{figure}[H]
+\begin{figure}
 
 {\centering \includegraphics{images/Barchart_1.png}
 
@@ -458,8 +466,9 @@ Probability \(P(X=x)\) & & & & & & 1 \\
 
 \caption{Barchart 1}
 
-\end{figure}%%
-\begin{figure}[H]
+\end{figure}
+
+\begin{figure}
 
 {\centering \includegraphics{images/Barchart_2.png}
 
@@ -467,13 +476,14 @@ Probability \(P(X=x)\) & & & & & & 1 \\
 
 \caption{Barchart 2}
 
-\end{figure}%
+\end{figure}
 
 \textbf{Question:} With your \textbf{stats} partner, discuss the shape
 of the distribution, is it what you would expect to see and compare this
 to what the barplot you made in excel, are they similar?
 
-\subsection{Exercise 4}\label{exercise-4}
+\hypertarget{exercise-4}{%
+\subsection{Exercise 4}\label{exercise-4}}
 
 Now we will use R to simulate 4 coin tosses representing 1 as heads and
 0 as tails. Note that I have withheld the output to avoid ``spoiling''
@@ -525,7 +535,8 @@ axis labels using the axis function.
 \end{Highlighting}
 \end{Shaded}
 
-\subsection{Exercise 5}\label{exercise-5}
+\hypertarget{exercise-5}{%
+\subsection{Exercise 5}\label{exercise-5}}
 
 Repeat exercise 4, but this time change the `prob = c(0.5, 0.5)' to
 `prob = c(0.3, 0.7)'.
@@ -533,7 +544,8 @@ Repeat exercise 4, but this time change the `prob = c(0.5, 0.5)' to
 \textbf{Question:} What happens to the shape of the distribution? What
 type of coin does this change in probability represent?
 
-\subsection{Exercise 6}\label{exercise-6}
+\hypertarget{exercise-6}{%
+\subsection{Exercise 6}\label{exercise-6}}
 
 Repeat exercise 4, but this time change the \texttt{set.seed(1)} to
 \texttt{set.seed(123)}.
@@ -541,7 +553,8 @@ Repeat exercise 4, but this time change the \texttt{set.seed(1)} to
 \textbf{Question:} What happens to the frequency table `Freq\_table' why
 do you think it might change?
 
-\subsection{Exercise 7}\label{exercise-7}
+\hypertarget{exercise-7}{%
+\subsection{Exercise 7}\label{exercise-7}}
 
 Six calves were born after artificial insemination (AI) with regular
 semen. Assuming that the probability for either being male or female is
@@ -594,7 +607,8 @@ female?\\
 \textbf{Question:} Finally, calculate what is the probability that
 exactly 4 females are born?\\
 
-\section{The Poisson Distribution}\label{the-poisson-distribution}
+\hypertarget{the-poisson-distribution}{%
+\section{The Poisson Distribution}\label{the-poisson-distribution}}
 
 The Poisson distribution is often used to model the number of expected
 events that occur during a given unit of time.
@@ -604,7 +618,8 @@ Remember if \(X \sim Po(\lambda)\) then
 \(P(X=x)=\frac{\lambda^xe^{-\lambda}}{x!}\) for \(x = 0,1,2,...\) and
 \(\lambda>0\)
 
-\subsection{Exercise 1}\label{exercise-1-1}
+\hypertarget{exercise-1-1}{%
+\subsection{Exercise 1}\label{exercise-1-1}}
 
 Lets take a look at an example. Let us assume that \textbf{on average} 5
 shoppers enter a store each hour. Say the shop is open for 10 hours per
@@ -628,7 +643,8 @@ the simulation for a full 5 day week, is there any change?
 your shop assistant might get overwhelmed if more than 10 shoppers come
 in, in any one hour period, what is the probability of this?
 
-\subsection{Exercise 2}\label{exercise-2-1}
+\hypertarget{exercise-2-1}{%
+\subsection{Exercise 2}\label{exercise-2-1}}
 
 We also often say that the Poisson Distribution is good for modeling
 rare events. For example, recent work in Drosophila suggests the
@@ -680,7 +696,8 @@ this suggest?\\
 less than or equal to 2 mutations How does this compare to the former
 probability, what does this suggest?\\
 
-\subsection{Advanced exercise}\label{advanced-exercise}
+\hypertarget{advanced-exercise}{%
+\subsection{Advanced exercise}\label{advanced-exercise}}
 
 From the tutorial we looked at Tomato germination. Use simulations to
 find approximate Binomial probabilities obtain an estimate of the
