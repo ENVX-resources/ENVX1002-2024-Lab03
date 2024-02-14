@@ -53,7 +53,7 @@
     "href": "Lab_03.html#exercise-6",
     "title": "Lab 03",
     "section": "Exercise 6",
-    "text": "Exercise 6\nRepeat exercise 4, but this time change the ‘set.seed(1)’ to ‘set.seed(123)’.\nQuestion: What happens to the frequency table ‘Freq_table’ why do you think it might change?"
+    "text": "Exercise 6\nRepeat exercise 4, but this time change the set.seed(1) to set.seed(123).\nQuestion: What happens to the frequency table ‘Freq_table’ why do you think it might change?"
   },
   {
     "objectID": "Lab_03.html#exercise-7",
