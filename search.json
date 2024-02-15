@@ -1,84 +1,84 @@
 [
   {
-    "objectID": "Lab_03.html",
-    "href": "Lab_03.html",
+    "objectID": "ENVX1002-2024-Lab03.html",
+    "href": "ENVX1002-2024-Lab03.html",
     "title": "Lab 03",
     "section": "",
     "text": "At the end of this computer practical, students should be able to calculate Binomial and Poisson probabilities using your calculator, R commands and R simulations.\nThe first part of this prac involves walking through some exercises with your demonstrator. These may involve some hand calculations, which you can do using R, your calculator, or in your head.\nBut before we begin, will do a quick 15 minute quiz worth 5% to check how you are going in the first few weeks."
   },
   {
-    "objectID": "Lab_03.html#notation",
-    "href": "Lab_03.html#notation",
+    "objectID": "ENVX1002-2024-Lab03.html#notation",
+    "href": "ENVX1002-2024-Lab03.html#notation",
     "title": "Lab 03",
     "section": "Notation",
     "text": "Notation\nFactorials: n! = n(n - 1)(n - 2)...(3)(2)(1) for n \\ge 1 and 0! = 1.\nBinomial coefficients: \\left(\\begin{matrix}n\\\\x\\end{matrix}\\right)=\\frac{n!}{x!(n-x)!} for x=1,2,3,...,n\nThe Binomial distribution models a context in which we have a fixed number n of independent Binary trials and a fixed likelihood of a success at each trial p = P(success).\nX = the number of successes in n trials \\sim Bin(n,p)\nProbability distribution function: P(X = x) = \\left(\\begin{matrix}n\\\\x\\end{matrix}\\right)p^x(1-p)^{n-x} for x=1,2,3,...,n\nCumulative distribution function (CDF): F(x) = P(X \\le x)."
   },
   {
-    "objectID": "Lab_03.html#exercise-1",
-    "href": "Lab_03.html#exercise-1",
+    "objectID": "ENVX1002-2024-Lab03.html#exercise-1",
+    "href": "ENVX1002-2024-Lab03.html#exercise-1",
     "title": "Lab 03",
     "section": "Exercise 1",
     "text": "Exercise 1\nWith your neighbour, discuss how coin tossing is related to the Binomial distribution?"
   },
   {
-    "objectID": "Lab_03.html#exercise-2",
-    "href": "Lab_03.html#exercise-2",
+    "objectID": "ENVX1002-2024-Lab03.html#exercise-2",
+    "href": "ENVX1002-2024-Lab03.html#exercise-2",
     "title": "Lab 03",
     "section": "Exercise 2",
     "text": "Exercise 2\nPracticing using the Binomial distribution formula\n\nCalculate 4!, 3!, 2! and 1!.\n\n4!=4 \\times 3 \\times 2 \\times 1\nNow you calculate the rest\n\nShow that\n\n\\left(\\begin{matrix}4\\\\0\\end{matrix}\\right)=1, \\left(\\begin{matrix}4\\\\1\\end{matrix}\\right)=4, \\left(\\begin{matrix}4\\\\2\\end{matrix}\\right)=6, \\left(\\begin{matrix}4\\\\3\\end{matrix}\\right)=4, \\left(\\begin{matrix}4\\\\4\\end{matrix}\\right)=1\n\\left(\\begin{matrix}4\\\\0\\end{matrix}\\right)=\\frac{4!}{0!(4-0)!}=\\frac{4!}{4!}=1\n\\left(\\begin{matrix}4\\\\1\\end{matrix}\\right)=\\frac{4!}{1!(4-1)!}=\\frac{4!}{1!\\times3!}=\\frac{4\\times3\\times2\\times1}{1\\times3\\times2\\times1}=\\frac{4}{1}=4\n\nNow you calculate the rest!\nNote you can also calculate this using the nCr option on your calculator - watch this YouTube video which gives a nice demonstration with some elevator music in the background to relax you."
   },
   {
-    "objectID": "Lab_03.html#exercise-3",
-    "href": "Lab_03.html#exercise-3",
+    "objectID": "ENVX1002-2024-Lab03.html#exercise-3",
+    "href": "ENVX1002-2024-Lab03.html#exercise-3",
     "title": "Lab 03",
     "section": "Exercise 3",
     "text": "Exercise 3\nCollaboration - Simulate the Binomial Distribution by Coin Tossing\n\nChoose a partner and together toss a coin 4 times counting the number of heads (use Flip a coin if you don’t have a coin). Record the number of heads in an excel spreadsheet called (Simulation 1) and set out a table in excel similar to below. Now repeat this process 19 more times.\n\n\n\n\n\nSimulation\nToss 1\nToss 2\nToss 3\nToss 4\n\n\n\n\n1\n\n\n\n\n\n\n2\n\n\n\n\n\n\n3\n\n\n\n\n\n\n…\n\n\n\n\n\n\n…\n\n\n\n\n\n\n20\n\n\n\n\n\n\n\n\nTally up the frequency of each number of heads and fill in a table similar to the following in excel.\n\n\n\n\nNumber heads x\n0\n1\n2\n3\n4\nTotal\n\n\n\n\nFrequency\n\n\n\n\n\n20\n\n\n\n\nNow fill in the probability distribution in excel = the proportion of number of heads in all simulations i.e. number of simulations ith 0 heads/20, number of simulations with 1 head/20, number of simulations with 2 heads/20,….\n\n\n\n\nNumber heads x\n0\n1\n2\n3\n4\nTotal\n\n\n\n\nProbability P(X=x)\n\n\n\n\n\n1\n\n\n\n\nnow see if you can make a barplot in Excel of the above table Excel instructinos\n\n\n\n\nBarchart 1\n\n\n\n\n\nBarchart 2\n\n\nQuestion: With your stats partner, discuss the shape of the distribution, is it what you would expect to see and compare this to what the barplot you made in excel, are they similar?"
   },
   {
-    "objectID": "Lab_03.html#exercise-4",
-    "href": "Lab_03.html#exercise-4",
+    "objectID": "ENVX1002-2024-Lab03.html#exercise-4",
+    "href": "ENVX1002-2024-Lab03.html#exercise-4",
     "title": "Lab 03",
     "section": "Exercise 4",
     "text": "Exercise 4\nNow we will use R to simulate 4 coin tosses representing 1 as heads and 0 as tails. Note that I have withheld the output to avoid “spoiling” the suprise.\n\ncoin &lt;- c(0,1) # vector representing coin tosses c(tails, heads)\nset.seed(1) # makes sure we all get the same answer i.e. we use the same randomly generated numbers\ntosses &lt;- sample(coin, size = 4*20, replace = T, prob = c(0.5, 0.5)) # this randomly picks a 0 or 1 from coin and there is an equal probability of sampling both. It creates a vector of results i.e. bo tosses in total\ndim(tosses) &lt;- c(20,4) # This creates a data frame with 4 columns and 20 rows that represents the 20 trials of 4 coin tosses\ntosses ## this prints the result\nNumHeads &lt;- rowSums(tosses) ## this sums the number of heads in each trial\nNumHeads # this prints the results  \n\nThe table function tallies each of the numbers of heads for each simulation. In each trial (4 tosses) How many times did you toss no heads, how many times did you toss 1 head, how many times did you toss 2 heads, how many times did you toss 3 heads and how many times did you toss 4 heads?\n\nFreq_table &lt;- table(NumHeads)\nFreq_table\n\nThe prob.table function divides each frequency by 20 i.e.P(X=0)=2/20\n\nprop.table(Freq_table) \n\nNow we can plot this. Notice how we customise the x-axis to ensure that 0 is displayed as even though there may be no instances where we got zero heads, it is still a possibility even if the probability is low. for this we use the argument , xaxt = “n” and then draw customised axis labels using the axis function.\n\nplot(prop.table(Freq_table), ylab=\"P(X=X)\", xlab = \"x\", xlim = c(0,4), xaxt = \"n\")\naxis(1, at = 0:4)"
   },
   {
-    "objectID": "Lab_03.html#exercise-5",
-    "href": "Lab_03.html#exercise-5",
+    "objectID": "ENVX1002-2024-Lab03.html#exercise-5",
+    "href": "ENVX1002-2024-Lab03.html#exercise-5",
     "title": "Lab 03",
     "section": "Exercise 5",
     "text": "Exercise 5\nRepeat exercise 4, but this time change the ‘prob = c(0.5, 0.5)’ to ‘prob = c(0.3, 0.7)’.\nQuestion: What happens to the shape of the distribution? What type of coin does this change in probability represent?"
   },
   {
-    "objectID": "Lab_03.html#exercise-6",
-    "href": "Lab_03.html#exercise-6",
+    "objectID": "ENVX1002-2024-Lab03.html#exercise-6",
+    "href": "ENVX1002-2024-Lab03.html#exercise-6",
     "title": "Lab 03",
     "section": "Exercise 6",
     "text": "Exercise 6\nRepeat exercise 4, but this time change the set.seed(1) to set.seed(123).\nQuestion: What happens to the frequency table ‘Freq_table’ why do you think it might change?"
   },
   {
-    "objectID": "Lab_03.html#exercise-7",
-    "href": "Lab_03.html#exercise-7",
+    "objectID": "ENVX1002-2024-Lab03.html#exercise-7",
+    "href": "ENVX1002-2024-Lab03.html#exercise-7",
     "title": "Lab 03",
     "section": "Exercise 7",
     "text": "Exercise 7\nSix calves were born after artificial insemination (AI) with regular semen. Assuming that the probability for either being male or female is 0.5,\nQuestion: What is the probability that all 6 are male?\n\nX= number of male calves \\sim Bin(n=6,p=0.5) P(X=6)=\\left(\\begin{matrix}6\\\\6\\end{matrix}\\right)0.5^6(1-0.5)^{6-6} = 0.015625\nor in R we can calculate using the dbinom function which calculates the exact probability of having 6 male calfs born\n\ndbinom(6,6,0.5)\n\nQuestion: What is the probability that more than 4 calves are female?\nNOTE P(more than 4 calves are female) = P(less than 2 calcves are male) = P(X=0)+P(X=1)\n=\\left(\\begin{matrix}6\\\\0\\end{matrix}\\right)0.5^0(1-0.5)^{6-0}+\\left(\\begin{matrix}6\\\\1\\end{matrix}\\right)0.5^1(1-0.5)^{6-1} = 0.109375\nor in R\n\n1-pbinom(4,6,0.5)\n\nQuestion: What are your assumptions? What is a more accurate estimate of the P(male calf)? Beef Article\nAssumptions: Each of the births is independent and P(male calf = 0.5). (In reality, it is 1.06 males per every female born in large populations of cattle, which gives p = 0.5145631. See article link.)\nUsing the updated probability p = 0.5145631 and using R recalculate\n\nQuestion: What is the probability that all 6 are male?\nQuestion: What is the probability that more than 4 calves are female?\nQuestion: Finally, calculate what is the probability that exactly 4 females are born?"
   },
   {
-    "objectID": "Lab_03.html#exercise-1-1",
-    "href": "Lab_03.html#exercise-1-1",
+    "objectID": "ENVX1002-2024-Lab03.html#exercise-1-1",
+    "href": "ENVX1002-2024-Lab03.html#exercise-1-1",
     "title": "Lab 03",
     "section": "Exercise 1",
     "text": "Exercise 1\nLets take a look at an example. Let us assume that on average 5 shoppers enter a store each hour. Say the shop is open for 10 hours per day, what would a typical day look like. Assuming that the number of visits follows a Poisson distribution i.e. If X \\sim Po(\\lambda), and because we know \\lambda=5 and n=10, we can simulate this in R using the following:\n\nshoppers &lt;- rpois(10, 5)\nshoppers\n\nQuestion: Take a look at the minimum and maximum number of shoppers generated by the model and discuss with your neighbour how you, as a shop owner, might use this information? Question: Now run the simulation for a full 5 day week, is there any change? Question: Now suppose as a shop owner you are concerned that your shop assistant might get overwhelmed if more than 10 shoppers come in, in any one hour period, what is the probability of this?"
   },
   {
-    "objectID": "Lab_03.html#exercise-2-1",
-    "href": "Lab_03.html#exercise-2-1",
+    "objectID": "ENVX1002-2024-Lab03.html#exercise-2-1",
+    "href": "ENVX1002-2024-Lab03.html#exercise-2-1",
     "title": "Lab 03",
     "section": "Exercise 2",
     "text": "Exercise 2\nWe also often say that the Poisson Distribution is good for modeling rare events. For example, recent work in Drosophila suggests the spontaneous rate of deleterious mutations is 1.2 per diploid genome.\nOpen the following article and read the abstract and then search the word poisson and read the final two sentences of this paragraph.\nNature article\nAssume that X = the number of deleterious mutations X \\sim Po(1.2).\nQuestion: What is the probability that an individual has 0 mutations?\nP(X=0)=\\frac{1.2^0e^{-1.2}}{0!}=0.3011942\nOr in R\n\ndpois(0,1.2)\n\nQuestion: What is the probability that an individual has less than or equal to 2 mutations?\nP(X\\le2)=P(X=0)+P(X=1)+P(X=2) =\\frac{1.2^0e^{-1.2}}{0!}+\\frac{1.2^1e^{-1.2}}{1!}+\\frac{1.2^2e^{-1.2}}{2!} =0.8794871\nOr in R\n\nppois(2,1.2)\n\nMore recent research found that the average spontaneous rate of deleterious mutations was actually 1.4 per diploid genome. Using R recalculate the following.\n\nQuestion: What is the new probability that an individual has 0 mutations. How does this compare to the former probability, what does this suggest?\nQuestion: What is the new probability that an individual has less than or equal to 2 mutations How does this compare to the former probability, what does this suggest?"
   },
   {
-    "objectID": "Lab_03.html#advanced-exercise",
-    "href": "Lab_03.html#advanced-exercise",
+    "objectID": "ENVX1002-2024-Lab03.html#advanced-exercise",
+    "href": "ENVX1002-2024-Lab03.html#advanced-exercise",
     "title": "Lab 03",
     "section": "Advanced exercise",
     "text": "Advanced exercise\nFrom the tutorial we looked at Tomato germination. Use simulations to find approximate Binomial probabilities obtain an estimate of the probability of getting 7 or more germinating seeds, by doing simulations from a Bin(8, 0.7) in R.\nRemember that the exact probability is\n\n1-pbinom(6,8,0.7)\n\n[1] 0.2552983\n\n\n\nFirst try 10 simulations and fill out a similar table to below in excel. What is your estimate of the probability of 7 germinating seeds?\n\n\nset.seed(123)\nseeds &lt;- rbinom(n = 10, 8, 0.7) # randomly generates 10 values from Bin(8,0.7)\nseeds ## prints seeds\ntable(seeds)/10 # turns counts into probabilities\nbarplot(table(seeds)/10, xlab=\"Number Germinated x\", ylab=\"Probability\", col=\"green\")\n\n\nNext try 100 simulations.\n\n\nset.seed(123)\nseeds &lt;- rbinom(n = 100, 8, 0.7) # randomly generates 100 values from Bin(8,0.7)\nseeds ## prints seeds\ntable(seeds)/100 # turns counts into probabilities\nbarplot(table(seeds)/100, xlab=\"Number germinated (x)\", ylab=\"Probability\", col=\"green\")\n\n\nNow we will try 10000 simulations. What do you notice about the histogram?\n\n\nset.seed(123)\nseeds &lt;- rbinom(n = 10000, 8, 0.7) # randomly generates 100 values from Bin(8,0.7)\ntable(seeds)/10000 # turns counts into probabilities\nbarplot(table(seeds)/10000, xlab=\"Number germinated (x)\", ylab=\"Probability\", col=\"green\")\n\n\nNow we can compare the exact results and the simulated results by adding up the probabilities for 7 and 8 seeds germinating in each of the scenarios.\n\nNote that the numbers will may differ slightly each time as they a randomly generated unless you set the same seed.\n\n\n\nNumber germinated\nP(X\\ge{7})\n\n\n\n\nExact method using R\n\n\n\nSimulation (n=10)\n\n\n\nSimulation (n=100)\n\n\n\nSimulation (n=10000)\n\n\n\n\nQuestion: Which of the simulations gives the closest result to the exact method, why do you think this is? - try ask chatGPT or use the # q: What is ? prompt if you have enabled copilot."
