@@ -8,17 +8,9 @@ date-format: "[Semester 1,] YYYY"
 
 # Learning outcomes
 
-At the end of this computer practical, students should be able to calculate Binomial and Poisson probabilities using your calculator, R commands and R simulations.
-
-The first part of this prac involves walking through some exercises with your demonstrator. These may involve some hand calculations, which you can do using R, your calculator, or in your head.
-
-But before we begin, your demonstrator will lead a group discussion on academic integrity.
-
-# Academic integrity
-
-This exercise encourages students to discuss academic integrity, and in particular the grey areas often present. Your demonstrator will provide you with a number of scenarios to discuss with each other in smaller groups, and then with the class. 
-
-If you are interested in more information on Academic Integrity at the University of Sydney, see the following link: https://www.sydney.edu.au/students/academic-integrity.html. Also ensure you have completed the Academic Honesty Education Module (AHEM) as soon as you can before your first assessment is due. 
+- At the end of this computer practical, students should be able to calculate Binomial and Poisson probabilities using your calculator, R commands and R simulations.
+- The first part of this prac involves walking through some exercises with your demonstrator. These may involve some hand calculations, which you can do using R, your calculator, or in your head.
+- But before we begin, will do a quick quiz worth 5% to check how you are going in the first few weeks.
 
 # The Binomial Distribution
 
@@ -61,13 +53,13 @@ $\left(\begin{matrix}4\\1\end{matrix}\right)=\frac{4!}{1!(4-1)!}=\frac{4!}{1!\ti
 
 Now you calculate the rest!
 
-**Note** you can also calculate this using the nCr option on your calculator - watch this vid https://www.youtube.com/watch?v=tZf8alsyVCQ which gives a nice demonstration with some elevator music in the background to relax you.
+**Note** you can also calculate this using the nCr option on your calculator - watch this [YouTube video](https://www.youtube.com/watch?v=tZf8alsyVCQ) which gives a nice demonstration with some elevator music in the background to relax you.
 
 ## Exercise 3
 
 **Collaboration** - Simulate the Binomial Distribution by Coin Tossing
 
-- Choose a partner and together toss a coin 4 times counting the number of heads (use https://justflipacoin.com/ if you don't have a coin). Record the number of heads in an excel spreadsheet called (Simulation 1)  and set out a table in excel similar to below. Now repeat this process 19 more times.\
+- Choose a partner and together toss a coin 4 times counting the number of heads (use [Flip a coin](https://justflipacoin.com/) if you don't have a coin). Record the number of heads in an excel spreadsheet called (Simulation 1)  and set out a table in excel similar to below. Now repeat this process 19 more times.\
 
 | Simulation | Toss 1 | Toss 2 | Toss 3 | Toss 4 
 |:---------- |:------ |:------ |:------ |:------
@@ -91,7 +83,7 @@ Now you calculate the rest!
 |:-------------------- |:--- |:--- |:--- |:--- |:--- |:----- 
 | Probability $P(X=x)$ |     |     |     |     |     | 1    
 
-- now see if you can make a barplot in excel of the above table https://support.microsoft.com/en-us/office/present-your-data-in-a-column-chart-d89050ba-e6b6-47de-b090-e9ab353c4c00 
+- now see if you can make a barplot in Excel of the above table [Excel instructinos](https://support.microsoft.com/en-us/office/present-your-data-in-a-column-chart-d89050ba-e6b6-47de-b090-e9ab353c4c00) 
 
 ![Barchart 1](images/Barchart_1.png)
 
@@ -176,7 +168,7 @@ or in R
 ```
 
 **Question:** What are your assumptions? What is a more accurate estimate of the P(male calf)?
-https://www.beefmagazine.com/mag/sex_ratio_riddle
+[Beef Article](https://www.beefmagazine.com/mag/sex_ratio_riddle)
 
 **Assumptions:** Each of the births is independent and *P(male calf = 0.5)*. (In reality, it is 1.06 males per every female born in large populations of cattle, which gives p = 0.5145631. See article link.)
 
@@ -213,7 +205,7 @@ We also often say that the Poisson Distribution is good for modeling rare events
 
 Open the following article and read the abstract and then search the word poisson and read the final two sentences of this paragraph.
 
-http://www.nature.com/nature/journal/v445/n7123/full/nature05388.html
+[Nature article](http://www.nature.com/nature/journal/v445/n7123/full/nature05388.html)
 
 Assume that X = the number of deleterious mutations $X \sim Po(1.2)$.
 
@@ -294,5 +286,5 @@ barplot(table(seeds)/10000, xlab="Number germinated (x)", ylab="Probability", co
 | Simulation (n=100)   |              |
 | Simulation (n=10000) |              |
 
-**Question:** Which of the simulations gives the closest result to the exact method, why do you think this is - try ask chatGPT?
+**Question:** Which of the simulations gives the closest result to the exact method, why do you think this is? - **try ask chatGPT** or use the **# q: What is ?** prompt if you have enabled copilot.
 
