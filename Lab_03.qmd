@@ -10,7 +10,7 @@ date-format: "[Semester 1,] YYYY"
 
 - At the end of this computer practical, students should be able to calculate Binomial and Poisson probabilities using your calculator, R commands and R simulations.
 - The first part of this prac involves walking through some exercises with your demonstrator. These may involve some hand calculations, which you can do using R, your calculator, or in your head.
-- But before we begin, will do a quick quiz worth 5% to check how you are going in the first few weeks.
+- But before we begin, will do a **quick 15 minute quiz** worth 5% to check how you are going in the first few weeks.
 
 # The Binomial Distribution
 
