@@ -205,7 +205,6 @@ window.Quarto = {
    
   <ul>
   <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link active" data-scroll-target="#learning-outcomes">Learning outcomes</a></li>
-  <li><a href="#academic-integrity" id="toc-academic-integrity" class="nav-link" data-scroll-target="#academic-integrity">Academic integrity</a></li>
   <li><a href="#the-binomial-distribution" id="toc-the-binomial-distribution" class="nav-link" data-scroll-target="#the-binomial-distribution">The Binomial Distribution</a>
   <ul class="collapse">
   <li><a href="#notation" id="toc-notation" class="nav-link" data-scroll-target="#notation">Notation</a></li>
@@ -239,14 +238,11 @@ window.Quarto = {
 
 <section id="learning-outcomes" class="level1">
 <h1>Learning outcomes</h1>
-<p>At the end of this computer practical, students should be able to calculate Binomial and Poisson probabilities using your calculator, R commands and R simulations.</p>
-<p>The first part of this prac involves walking through some exercises with your demonstrator. These may involve some hand calculations, which you can do using R, your calculator, or in your head.</p>
-<p>But before we begin, your demonstrator will lead a group discussion on academic integrity.</p>
-</section>
-<section id="academic-integrity" class="level1">
-<h1>Academic integrity</h1>
-<p>This exercise encourages students to discuss academic integrity, and in particular the grey areas often present. Your demonstrator will provide you with a number of scenarios to discuss with each other in smaller groups, and then with the class.</p>
-<p>If you are interested in more information on Academic Integrity at the University of Sydney, see the following link: https://www.sydney.edu.au/students/academic-integrity.html. Also ensure you have completed the Academic Honesty Education Module (AHEM) as soon as you can before your first assessment is due.</p>
+<ul>
+<li>At the end of this computer practical, students should be able to calculate Binomial and Poisson probabilities using your calculator, R commands and R simulations.</li>
+<li>The first part of this prac involves walking through some exercises with your demonstrator. These may involve some hand calculations, which you can do using R, your calculator, or in your head.</li>
+<li>But before we begin, will do a <strong>quick 15 minute quiz</strong> worth 5% to check how you are going in the first few weeks.</li>
+</ul>
 </section>
 <section id="the-binomial-distribution" class="level1 page-columns page-full">
 <h1>The Binomial Distribution</h1>
@@ -279,13 +275,13 @@ window.Quarto = {
 <span class="math inline">\left(\begin{matrix}4\\1\end{matrix}\right)=\frac{4!}{1!(4-1)!}=\frac{4!}{1!\times3!}=\frac{4\times3\times2\times1}{1\times3\times2\times1}=\frac{4}{1}=4</span><br>
 </p>
 <p>Now you calculate the rest!</p>
-<p><strong>Note</strong> you can also calculate this using the nCr option on your calculator - watch this vid https://www.youtube.com/watch?v=tZf8alsyVCQ which gives a nice demonstration with some elevator music in the background to relax you.</p>
+<p><strong>Note</strong> you can also calculate this using the nCr option on your calculator - watch this <a href="https://www.youtube.com/watch?v=tZf8alsyVCQ">YouTube video</a> which gives a nice demonstration with some elevator music in the background to relax you.</p>
 </section>
 <section id="exercise-3" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="exercise-3">Exercise 3</h2>
 <p><strong>Collaboration</strong> - Simulate the Binomial Distribution by Coin Tossing</p>
 <ul>
-<li>Choose a partner and together toss a coin 4 times counting the number of heads (use https://justflipacoin.com/ if you don’t have a coin). Record the number of heads in an excel spreadsheet called (Simulation 1) and set out a table in excel similar to below. Now repeat this process 19 more times.<br>
+<li>Choose a partner and together toss a coin 4 times counting the number of heads (use <a href="https://justflipacoin.com/">Flip a coin</a> if you don’t have a coin). Record the number of heads in an excel spreadsheet called (Simulation 1) and set out a table in excel similar to below. Now repeat this process 19 more times.<br>
 </li>
 </ul>
 <table class="table">
@@ -398,7 +394,7 @@ window.Quarto = {
 </tbody>
 </table>
 <ul>
-<li>now see if you can make a barplot in excel of the above table https://support.microsoft.com/en-us/office/present-your-data-in-a-column-chart-d89050ba-e6b6-47de-b090-e9ab353c4c00</li>
+<li>now see if you can make a barplot in Excel of the above table <a href="https://support.microsoft.com/en-us/office/present-your-data-in-a-column-chart-d89050ba-e6b6-47de-b090-e9ab353c4c00">Excel instructinos</a></li>
 </ul>
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
@@ -468,7 +464,7 @@ window.Quarto = {
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">-</span><span class="fu">pbinom</span>(<span class="dv">4</span>,<span class="dv">6</span>,<span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><strong>Question:</strong> What are your assumptions? What is a more accurate estimate of the P(male calf)? https://www.beefmagazine.com/mag/sex_ratio_riddle</p>
+<p><strong>Question:</strong> What are your assumptions? What is a more accurate estimate of the P(male calf)? <a href="https://www.beefmagazine.com/mag/sex_ratio_riddle">Beef Article</a></p>
 <p><strong>Assumptions:</strong> Each of the births is independent and <em>P(male calf = 0.5)</em>. (In reality, it is 1.06 males per every female born in large populations of cattle, which gives p = 0.5145631. See article link.)</p>
 <p>Using the updated probability p = 0.5145631 and using R recalculate<br>
 </p>
@@ -496,7 +492,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="exercise-2-1">Exercise 2</h2>
 <p>We also often say that the Poisson Distribution is good for modeling rare events. For example, recent work in Drosophila suggests the spontaneous rate of deleterious mutations is 1.2 per diploid genome.</p>
 <p>Open the following article and read the abstract and then search the word poisson and read the final two sentences of this paragraph.</p>
-<p>http://www.nature.com/nature/journal/v445/n7123/full/nature05388.html</p>
+<p><a href="http://www.nature.com/nature/journal/v445/n7123/full/nature05388.html">Nature article</a></p>
 <p>Assume that X = the number of deleterious mutations <span class="math inline">X \sim Po(1.2)</span>.</p>
 <p><strong>Question:</strong> What is the probability that an individual has 0 mutations?</p>
 <p><span class="math inline">P(X=0)=\frac{1.2^0e^{-1.2}}{0!}=0.3011942</span></p>
@@ -585,7 +581,7 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<p><strong>Question:</strong> Which of the simulations gives the closest result to the exact method, why do you think this is - try ask chatGPT?</p>
+<p><strong>Question:</strong> Which of the simulations gives the closest result to the exact method, why do you think this is? - <strong>try ask chatGPT</strong> or use the <strong># q: What is ?</strong> prompt if you have enabled copilot.</p>
 
 
 </section>
