@@ -6,11 +6,25 @@ date: today
 date-format: "[Semester 1,] YYYY"
 ---
 
-# Learning outcomes
+::: {.callout-tip}
+**Learning Outcomes**
 
-- At the end of this computer practical, students should be able to calculate Binomial and Poisson probabilities using your calculator, R commands and R simulations.
-- The first part of this prac involves walking through some exercises with your demonstrator. These may involve some hand calculations, which you can do using R, your calculator, or in your head.
-- But before we begin, will do a **quick 15 minute quiz** worth 5% to check how you are going in the first few weeks.
+At the end of this computer practical, students should be able to: 
+
+- Calculate Binomial probabilities
+  - Using your calculator;
+  - R commands;
+  - R simulations.
+- Calculate Poisson probabilities
+  - Using your calculator;
+  - R commands;
+  - R simulations.
+:::
+
+# Computer lab
+
+The first part of this prac involves walking through some exercises with your demonstrator. These may involve some hand calculations, which you can do using R, your calculator, or in your head.
+
 
 # The Binomial Distribution
 
@@ -106,7 +120,7 @@ NumHeads <- rowSums(tosses) ## this sums the number of heads in each trial
 NumHeads # this prints the results  
 ```
 
-The table function tallies each of the numbers of heads for each simulation. In each trial (4 tosses) How many times did you toss no heads, how many times did you toss 1 head, how many times did you toss 2 heads, how many times did you toss 3 heads and how many times did you toss 4 heads?
+- The table function tallies each of the numbers of heads for each simulation. In each trial (4 tosses) How many times did you toss no heads, how many times did you toss 1 head, how many times did you toss 2 heads, how many times did you toss 3 heads and how many times did you toss 4 heads?
 
 ```{r, eval=FALSE}
 Freq_table <- table(NumHeads)
@@ -119,7 +133,7 @@ The prob.table function divides each frequency by 20 i.e.$P(X=0)=2/20$
 prop.table(Freq_table) 
 ```
 
-Now we can plot this. Notice how we customise the x-axis to ensure that 0 is displayed as even though there may be no instances where we got zero heads, it is still a possibility even if the probability is low. for this we use the argument , xaxt = "n" and then draw customised axis labels using the axis function.
+- Now we can plot this. Notice how we customise the x-axis to ensure that 0 is displayed as even though there may be no instances where we got zero heads, it is still a possibility even if the probability is low. for this we use the argument , xaxt = "n" and then draw customised axis labels using the axis function.
 
 ```{r, eval=FALSE}
 plot(prop.table(Freq_table), ylab="P(X=X)", xlab = "x", xlim = c(0,4), xaxt = "n")
@@ -238,6 +252,7 @@ More recent research found that the average spontaneous rate of deleterious muta
 **Question:** What is the new probability that an individual has less than or equal to 2 mutations How does this compare to the former probability, what does this suggest?\
 
 ## Advanced exercise
+
 From the tutorial we looked at Tomato germination. Use simulations to find approximate Binomial probabilities obtain an estimate of the probability of getting 7 or more germinating seeds, by doing simulations from a $Bin(8, 0.7)$ in R.
 
 Remember that the exact probability is 
