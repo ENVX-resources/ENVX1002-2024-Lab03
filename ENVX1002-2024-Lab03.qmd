@@ -307,3 +307,9 @@ barplot(table(seeds)/10000, xlab="Number germinated (x)", ylab="Probability", co
 
 **Question:** Which of the simulations gives the closest result to the exact method, why do you think this is? - **try ask chatGPT** or use the **# q: What is ?** prompt if you have enabled copilot.
 
+
+```{r, echo = FALSE, eval = FALSE}
+#renv::install("jhelvy/renderthis")
+#renv::install("chromote")
+#renderthis::to_pdf("ENVX1002-2024-Lab03.html")
+```
