@@ -311,5 +311,5 @@ barplot(table(seeds)/10000, xlab="Number germinated (x)", ylab="Probability", co
 ```{r, echo = FALSE, eval = FALSE}
 #renv::install("jhelvy/renderthis")
 #renv::install("chromote")
-#renderthis::to_pdf("ENVX1002-2024-Lab03.html")
+#renderthis::to_pdf("_site/ENVX1002-2024-Lab03.html")
 ```
